@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artesanías & Arte: sitio web de difusión de artesanías hechas a mano, agrupadas en tejidos, cerámicas y pinturas. Cada artículo incluye una ficha con información adicional en PDF.">
+  <meta name="author" content="Javier Rodriguez">
+  <meta name="keywords" content="artesanías, tejidos, cerámica, pinturas, hechas a mano, emprendimiento">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6B4226">
+  <meta name="color-scheme" content="light">
+  <title>Artesanías & Arte | Tejidos, cerámicas y pinturas</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="cabecera">
+    <p class="marca">&#127912; Artesanías &amp; Arte</p>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#articulos" aria-current="page">Artículos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca del sitio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <section class="portada" aria-labelledby="titulo-portada">
+      <h1 id="titulo-portada">Artesanías &amp; Arte</h1>
+      <p>Tejidos, cerámicas y pinturas hechas a mano con dedicación y materiales
+        nobles. Cada pieza es única y cuenta una historia hecha por artesanos de la
+        región. Explorá nuestro catálogo y descubrí el detalle que hace especial a
+        cada artículo.</p>
+    </section>
+
+    <section id="articulos" aria-labelledby="titulo-articulos">
+      <h2 id="titulo-articulos">Nuestros artículos</h2>
+      <p class="intro-seccion">Elegí una categoría en la lista desplegable para filtrar
+        el catálogo. Presioná el botón <strong>+ Info</strong> de cada artículo para
+        abrir su ficha con la información adicional en formato PDF.</p>
+
+      <div class="filtro">
+        <div class="filtro-control">
+          <details class="categorias">
+            <summary>Seleccionar categoría <span class="flecha" aria-hidden="true">&#9662;</span></summary>
+            <div class="opciones" role="group" aria-labelledby="etiqueta-categorias">
+              <p class="sr-only" id="etiqueta-categorias">Categorías de artículos disponibles</p>
+              <label class="opcion">
+                <input type="radio" name="categoria" value="todas" checked>
+                <span>Todas las categorías</span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="categoria" value="tejidos">
+                <span>Solo tejidos</span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="categoria" value="ceramicas">
+                <span>Solo cerámicas</span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="categoria" value="pinturas">
+                <span>Solo pinturas</span>
+              </label>
+            </div>
+          </details>
+          <p class="estado-filtro">Mostrando todos los artículos.</p>
+        </div>
+
+        <div class="catalogo">
+
+          <article class="tarjeta" data-cat="tejidos">
+            <figure>
+              <img src="articulos/tejidos/tejido1.png"
+                   alt="Fotografía de tejido en lana de dos patitos."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Dos patitos</h3>
+              <p class="categoria-tag">Tejidos</p>
+              <p>Tejido a mano en lana de dos patitos.</p>
+              <a class="boton" href="articulos/tejidos/tejido1.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre el tejido de dos patitos (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="tejidos">
+            <figure>
+              <img src="articulos/tejidos/tejido2.png"
+                   alt="Fotografía del tejido de tom lagartija."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Tejido de Tom Lagartija</h3>
+              <p class="categoria-tag">Tejidos</p>
+              <p>Tejido a mano en lana de tom lagartija de Hoppers.</p>
+              <a class="boton" href="articulos/tejidos/tejido2.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre el Tejido de Tom Lagartija (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="tejidos">
+            <figure>
+              <img src="articulos/tejidos/tejido3.png"
+                   alt="Fotografía de la figura de la película de ratatouille."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Tejido de Ratatouille</h3>
+              <p class="categoria-tag">Tejidos</p>
+              <p>Tejido a mano en lana de ratatouille.</p>
+              <a class="boton" href="articulos/tejidos/tejido3.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre el tejido de ratatouille (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="ceramicas">
+            <figure>
+              <img src="articulos/ceramicas/ceramica1.png"
+                   alt="Fotografía de taza de paisaje en las montañas."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Taza de paisaje</h3>
+              <p class="categoria-tag">Cerámicas</p>
+              <p>Taza de cerámica de paisaje en las montañas.</p>
+              <a class="boton" href="articulos/ceramicas/ceramica1.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre la Taza de paisaje (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="ceramicas">
+            <figure>
+              <img src="articulos/ceramicas/ceramica2.png"
+                   alt="Fotografía de taza de ovejas."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Taza de ovejas</h3>
+              <p class="categoria-tag">Cerámicas</p>
+              <p>Taza de cerámica de paisaje con ovejas.</p>
+              <a class="boton" href="articulos/ceramicas/ceramica2.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre la taza de ceramica (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="ceramicas">
+            <figure>
+              <img src="articulos/ceramicas/ceramica3.png"
+                   alt="Plato decorativo de cerámica de dos patos."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Taza de patos</h3>
+              <p class="categoria-tag">Cerámicas</p>
+              <p>Plato decorativo de cerámica de dos patos.</p>
+              <a class="boton" href="articulos/ceramicas/ceramica3.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">Plato de cerámica de dos patos (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="pinturas">
+            <figure>
+              <img src="articulos/pinturas/pintura1.png"
+                   alt="Fotografía del cuadro al óleo que representa la puerta de una oportunidad."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Cuadro al Óleo</h3>
+              <p class="categoria-tag">Pinturas</p>
+              <p>Paisaje original al óleo con pastas que capturan la luz.</p>
+              <a class="boton" href="articulos/pinturas/pintura1.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre el cuadro al oleo (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="pinturas">
+            <figure>
+              <img src="articulos/pinturas/pintura2.png"
+                   alt="Fotografia de la noche estrellada de Van Gogh."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Acuarela Río</h3>
+              <p class="categoria-tag">Pinturas</p>
+              <p>Cuadro de la noche estrellada de Van Gogh.</p>
+              <a class="boton" href="articulos/pinturas/pintura2.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre La noche estrellada (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="pinturas">
+            <figure>
+              <img src="articulos/pinturas/pintura3.png"
+                   alt="Fotografía del cuadro del El Principito, con colores pastel y un cielo estrellado."
+                   loading="lazy">
+            </figure>
+            <div class="tarjeta-cuerpo">
+              <h3>Atardecer al Pastel</h3>
+              <p class="categoria-tag">Pinturas</p>
+              <p>Obra del El Principito.</p>
+              <a class="boton" href="articulos/pinturas/pintura3.pdf" target="_blank" rel="noopener">
+                + Info <span class="sr-only">sobre El Principito (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <nav class="pie-navegacion" aria-label="Enlaces del pie de página">
+      <a href="#contenido">Volver arriba</a>
+      <span aria-hidden="true">|</span>
+      <a href="contacto.html">Contacto</a>
+      <span aria-hidden="true">|</span>
+      <a href="acerca.html">Acerca del sitio</a>
+    </nav>
+    <p>&copy; 2026 Artesanías &amp; Arte — Sitio académico de Proyecto de Software.</p>
+    <p>Sitio estático: solo HTML y CSS, sin scripts.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactanos para consultar sobre nuestras artesanias a mano. Formulario de contacto para consultas, pedidos y mas informacion.">
+    <meta name="author" content="Javier Rodriguez">
+    <meta name="keywords" content="contacto, consulta, pedidos, artesanias, mensaje">
+    <title>Artesanias a Mano - Contacto</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <h1><a href="index.html">Artesanias a Mano</a></h1>
+        <p>Piezas unicas elaboradas con dedicacion y tradicion</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Articulos</a></li>
+            <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido-principal">
+        <h2 class="section-title">Contacto</h2>
+
+        <form class="formulario-contacto" action="#" method="post" novalidate>
+            <div class="form-group">
+                <label for="nombre">Nombre completo <span class="required" aria-hidden="true">*</span><span class="sr-only">(requerido)</span></label>
+                <input type="text"
+                       id="nombre"
+                       name="nombre"
+                       placeholder="Ej: Juan Perez"
+                       required
+                       autocomplete="name"
+                       aria-required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo electronico <span class="required" aria-hidden="true">*</span><span class="sr-only">(requerido)</span></label>
+                <input type="email"
+                       id="correo"
+                       name="correo"
+                       placeholder="Ej: juan@ejemplo.com"
+                       required
+                       autocomplete="email"
+                       aria-required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje <span class="required" aria-hidden="true">*</span><span class="sr-only">(requerido)</span></label>
+                <textarea id="mensaje"
+                          name="mensaje"
+                          placeholder="Escribe tu mensaje aqui..."
+                          required
+                          aria-required="true"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Artesanias a Mano. Todos los derechos reservados.</p>
+        <p>Ultima actualizacion: 12 de septiembre de 2026</p>
+    </footer>
+</body>
+</html>

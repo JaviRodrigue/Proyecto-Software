@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogo de artesanias a mano: tejidos, ceramicas y pinturas. Explora nuestras piezas unicas elaboradas artesanalmente.">
+    <meta name="author" content="Javier Rodriguez">
+    <meta name="keywords" content="artesanias, tejidos, ceramicas, pinturas, catalogo, hechas a mano">
+    <title>Artesanias a Mano - Articulos</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <h1><a href="index.html">Artesanias a Mano</a></h1>
+        <p>Piezas unicas elaboradas con dedicacion y tradicion</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html" aria-current="page">Articulos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido-principal">
+        <h2 class="section-title">Catalogo de Articulos</h2>
+
+        <!-- Radio buttons ocultos para el filtrado CSS puro -->
+        <section class="filtros-categorias" aria-label="Filtrar por categoria">
+            <span class="dropdown-label" id="label-categoria">Selecciona una categoria:</span>
+
+            <input type="radio" name="categoria" id="cat-todas" checked>
+            <input type="radio" name="categoria" id="cat-tejidos">
+            <input type="radio" name="categoria" id="cat-ceramicas">
+            <input type="radio" name="categoria" id="cat-pinturas">
+
+            <div class="dropdown-select" role="radiogroup" aria-labelledby="label-categoria">
+                <span class="dropdown-btn" aria-hidden="true">Todas las categorias</span>
+                <div class="dropdown-options" role="listbox">
+                    <label for="cat-todas" role="option" tabindex="0">Todas las categorias</label>
+                    <label for="cat-tejidos" role="option" tabindex="0">Tejidos</label>
+                    <label for="cat-ceramicas" role="option" tabindex="0">Ceramicas</label>
+                    <label for="cat-pinturas" role="option" tabindex="0">Pinturas</label>
+                </div>
+            </div>
+
+            <!-- Galeria de articulos -->
+            <div class="galeria-articulos">
+
+                <!-- TEJIDOS -->
+                <section class="categoria-seccion cat-tejidos" aria-labelledby="titulo-tejidos">
+                    <h3 id="titulo-tejidos">Tejidos</h3>
+                    <div class="articulos-grid">
+                        <article class="articulo-card">
+                            <img src="articulos/tejidos/tejido1.png"
+                                 alt="Tejido a mano de dos patitos en lana suave, color amarillo y blanco, de aproximadamente 12 centimetros de alto."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Dos patitos</h4>
+                                <p class="card-desc">Tejido a mano en lana de dos patitos.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/tejidos/tejido1.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/tejidos/tejido2.png"
+                                 alt="Tejido a mano de Tom Lagartija en lana de algodon, de aproximadamente 20 centimetros de largo."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Tejido de Tom Lagartija</h4>
+                                <p class="card-desc">Tejido a mano en lana de tom lagartija de Hoppers.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/tejidos/tejido2.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/tejidos/tejido3.png"
+                                 alt="Tejido a mano de Ratatouille en lana acrilica, de aproximadamente 15 centimetros de alto."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Tejido de Ratatouille</h4>
+                                <p class="card-desc">Tejido a mano en lana de ratatouille.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/tejidos/tejido3.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- CERAMICAS -->
+                <section class="categoria-seccion cat-ceramicas" aria-labelledby="titulo-ceramicas">
+                    <h3 id="titulo-ceramicas">Ceramicas</h3>
+                    <div class="articulos-grid">
+                        <article class="articulo-card">
+                            <img src="articulos/ceramicas/ceramica1.png"
+                                 alt="Taza de ceramica con motivos de paisaje de montanas, esmaltada con colores verdes y marrones, capacidad de 250 mililitros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Taza de paisaje</h4>
+                                <p class="card-desc">Taza de ceramica de paisaje en las montanas.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/ceramicas/ceramica1.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/ceramicas/ceramica2.png"
+                                 alt="Taza de ceramica con decoracion de ovejas en un paisaje, esmaltada y pintada a mano, capacidad de 250 mililitros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Taza de ovejas</h4>
+                                <p class="card-desc">Taza de ceramica de paisaje con ovejas.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/ceramicas/ceramica2.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/ceramicas/ceramica3.png"
+                                 alt="Plato decorativo de ceramica con motivos de dos patos, esmaltado en color blanco con detalles pintados a mano, diametro de 20 centimetros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Taza de patos</h4>
+                                <p class="card-desc">Plato decorativo de ceramica de dos patos.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/ceramicas/ceramica3.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- PINTURAS -->
+                <section class="categoria-seccion cat-pinturas" aria-labelledby="titulo-pinturas">
+                    <h3 id="titulo-pinturas">Pinturas</h3>
+                    <div class="articulos-grid">
+                        <article class="articulo-card">
+                            <img src="articulos/pinturas/pintura1.png"
+                                 alt="Cuadro al oleo de un paisaje con una puerta que representa una oportunidad, pintado con pastas que capturan la luz, sobre lienzo de algodon de 60 por 80 centimetros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Cuadro al Oleo</h4>
+                                <p class="card-desc">Paisaje original al oleo con pastas que capturan la luz, que representa la puerta de una oportunidad.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/pinturas/pintura1.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/pinturas/pintura2.png"
+                                 alt="Cuadro de la noche estrellada de Van Gogh pintado en acuarela sobre papel de algodon, de 30 por 40 centimetros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Acuarela Rio</h4>
+                                <p class="card-desc">Cuadro de la noche estrellada de Van Gogh, pintado en acuarela sobre papel de algodon.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/pinturas/pintura2.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+
+                        <article class="articulo-card">
+                            <img src="articulos/pinturas/pintura3.png"
+                                 alt="Obra de El Principito pintada en pastel seco con colores pastel y un cielo estrellado, sobre papel texturizado de 45 por 60 centimetros."
+                                 class="card-img"
+                                 loading="lazy">
+                            <div class="card-body">
+                                <h4>Atardecer al Pastel</h4>
+                                <p class="card-desc">Obra del El Principito, con colores pastel y un cielo estrellado.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="articulos/pinturas/pintura3.pdf" target="_blank" rel="noopener noreferrer" class="btn-info">+ Info</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Artesanias a Mano. Todos los derechos reservados.</p>
+        <p>Ultima actualizacion: 12 de septiembre de 2026</p>
+    </footer>
+</body>
+</html>

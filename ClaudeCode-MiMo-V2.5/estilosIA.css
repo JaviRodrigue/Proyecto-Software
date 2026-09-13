@@ -1,0 +1,842 @@
+/* ========================================
+   RESET Y BASE
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-fondo: #f7f5f0;
+    --color-texto: #2c3e2d;
+    --color-texto-claro: #5a6b5c;
+    --color-primario: #3d6b4f;
+    --color-primario-oscuro: #2d5a3d;
+    --color-secundario: #7ba87e;
+    --color-acento: #c4a882;
+    --color-borde: #d4cfc5;
+    --color-blanco: #ffffff;
+    --color-fondo-card: #ffffff;
+    --color-fondo-nav: #2c3e2d;
+    --color-hover: #e8f0e9;
+    --sombra: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+    --radio: 0.5rem;
+    --transicion: 0.3s ease;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color var(--transicion);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 0.1875rem solid var(--color-secundario);
+    outline-offset: 0.125rem;
+    border-radius: 0.125rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Accesibilidad: texto solo para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.site-header {
+    background-color: var(--color-fondo-nav);
+    color: var(--color-blanco);
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.site-header h1 a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.site-header h1 a:hover,
+.site-header h1 a:focus {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+.site-header p {
+    font-size: 0.9rem;
+    color: var(--color-borde);
+    margin-top: 0.25rem;
+}
+
+/* ========================================
+   NAVEGACION
+   ======================================== */
+.main-nav {
+    background-color: var(--color-primario);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.main-nav li {
+    flex-shrink: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.875rem 1.5rem;
+    color: var(--color-blanco);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color var(--transicion), color var(--transicion);
+    border-bottom: 0.1875rem solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.main-nav a[aria-current="page"] {
+    background-color: var(--color-primario-oscuro);
+    border-bottom-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+main {
+    flex: 1;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    width: 100%;
+}
+
+/* ========================================
+   HERO / BANNER
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: var(--radio);
+    margin-bottom: 2.5rem;
+}
+
+.hero h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    opacity: 0.95;
+    line-height: 1.7;
+}
+
+/* ========================================
+   TARJETAS RESUMEN (index)
+   ======================================== */
+.categorias-resumen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.categoria-card {
+    background-color: var(--color-fondo-card);
+    border: 0.0625rem solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: box-shadow var(--transicion), transform var(--transicion);
+}
+
+.categoria-card:hover,
+.categoria-card:focus-within {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-0.125rem);
+}
+
+.categoria-card h3 {
+    font-size: 1.35rem;
+    color: var(--color-primario);
+    margin-bottom: 0.75rem;
+}
+
+.categoria-card p {
+    color: var(--color-texto-claro);
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.625rem 1.5rem;
+    border-radius: var(--radio);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color var(--transicion), color var(--transicion), box-shadow var(--transicion);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-blanco);
+    text-decoration: none;
+    box-shadow: var(--sombra-hover);
+}
+
+.btn-secondary {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #b39a72;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.btn-contact {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+/* ========================================
+   SECCIONES DE CONTENIDO
+   ======================================== */
+.section-title {
+    font-size: 1.75rem;
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1875rem solid var(--color-secundario);
+}
+
+/* ========================================
+   DROPDOWN DE CATEGORIAS (CSS puro)
+   ======================================== */
+.filtros-categorias {
+    margin-bottom: 2rem;
+}
+
+.filtros-categorias input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.filtros-categorias .dropdown-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-select {
+    position: relative;
+    display: inline-block;
+    min-width: 16rem;
+}
+
+.dropdown-select .dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-fondo-card);
+    border: 0.125rem solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 1rem;
+    color: var(--color-texto);
+    cursor: pointer;
+    transition: border-color var(--transicion);
+    user-select: none;
+}
+
+.dropdown-select .dropdown-btn::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0.375rem solid transparent;
+    border-right: 0.375rem solid transparent;
+    border-top: 0.4375rem solid var(--color-texto-claro);
+    margin-left: 0.75rem;
+    flex-shrink: 0;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-fondo-card);
+    border: 0.125rem solid var(--color-borde);
+    border-top: none;
+    border-radius: 0 0 var(--radio) var(--radio);
+    box-shadow: var(--sombra-hover);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.25rem);
+    transition: opacity var(--transicion), visibility var(--transicion), transform var(--transicion);
+}
+
+.dropdown-select:hover .dropdown-options,
+.dropdown-select:focus-within .dropdown-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-options label {
+    display: block;
+    padding: 0.625rem 1rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color var(--transicion);
+}
+
+.dropdown-options label:hover,
+.dropdown-options label:focus-within {
+    background-color: var(--color-hover);
+}
+
+.filtros-categorias input[type="radio"]:checked + .dropdown-btn-text {
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+/* ========================================
+   GALERIA DE ARTICULOS
+   ======================================== */
+.galeria-articulos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.categoria-seccion {
+    display: none;
+}
+
+.categoria-seccion h3 {
+    font-size: 1.35rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    padding-bottom: 0.375rem;
+    border-bottom: 0.125rem solid var(--color-borde);
+}
+
+/* Reglas CSS para mostrar/ocultar categorias con radio buttons */
+#cat-todas:checked ~ .galeria-articulos .categoria-seccion {
+    display: block;
+}
+
+#cat-tejidos:checked ~ .galeria-articulos .categoria-seccion.cat-tejidos {
+    display: block;
+}
+
+#cat-ceramicas:checked ~ .galeria-articulos .categoria-seccion.cat-ceramicas {
+    display: block;
+}
+
+#cat-pinturas:checked ~ .galeria-articulos .categoria-seccion.cat-pinturas {
+    display: block;
+}
+
+/* Grid interno de cada categoria: maximo 3 columnas */
+.categoria-seccion .articulos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ========================================
+   TARJETA DE ARTICULO
+   ======================================== */
+.articulo-card {
+    background-color: var(--color-fondo-card);
+    border: 0.0625rem solid var(--color-borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transicion), transform var(--transicion);
+}
+
+.articulo-card:hover,
+.articulo-card:focus-within {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-0.125rem);
+}
+
+.articulo-card .card-img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    background-color: var(--color-borde);
+}
+
+.articulo-card .card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.articulo-card h4 {
+    font-size: 1.1rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.articulo-card .card-desc {
+    color: var(--color-texto-claro);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.articulo-card .card-footer {
+    padding: 0 1.25rem 1.25rem;
+}
+
+.articulo-card .btn-info {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border-radius: var(--radio);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color var(--transicion), box-shadow var(--transicion);
+}
+
+.articulo-card .btn-info:hover,
+.articulo-card .btn-info:focus {
+    background-color: #b39a72;
+    text-decoration: none;
+    box-shadow: var(--sombra);
+}
+
+/* ========================================
+   FORMULARIO DE CONTACTO
+   ======================================== */
+.formulario-contacto {
+    max-width: 40rem;
+    margin: 0 auto;
+    background-color: var(--color-fondo-card);
+    padding: 2rem;
+    border-radius: var(--radio);
+    border: 0.0625rem solid var(--color-borde);
+    box-shadow: var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+.form-group label .required {
+    color: #c0392b;
+    margin-left: 0.125rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 0.125rem solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.1875rem rgba(123, 168, 126, 0.25);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #c0392b;
+}
+
+.form-group textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* ========================================
+   ACERCA DE
+   ======================================== */
+.acerca-container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.acerca-section {
+    background-color: var(--color-fondo-card);
+    border: 0.0625rem solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--sombra);
+}
+
+.acerca-section h3 {
+    font-size: 1.25rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    padding-bottom: 0.375rem;
+    border-bottom: 0.125rem solid var(--color-borde);
+}
+
+.acerca-section p {
+    line-height: 1.7;
+    color: var(--color-texto);
+    margin-bottom: 0.75rem;
+}
+
+.autor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.autor-info .info-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.autor-info .info-label {
+    font-weight: 600;
+    color: var(--color-texto);
+    min-width: 6rem;
+}
+
+.autor-info .info-value {
+    color: var(--color-texto-claro);
+}
+
+.tecnologias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.tecnologias-lista li {
+    background-color: var(--color-hover);
+    color: var(--color-primario);
+    padding: 0.375rem 1rem;
+    border-radius: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 0.0625rem solid var(--color-secundario);
+}
+
+.fecha-actualizacion {
+    font-style: italic;
+    color: var(--color-texto-claro);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.site-footer {
+    background-color: var(--color-fondo-nav);
+    color: var(--color-borde);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+}
+
+.site-footer a {
+    color: var(--color-acento);
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: var(--color-blanco);
+}
+
+/* ========================================
+   SKIP LINK (Accesibilidad)
+   ======================================== */
+.skip-link {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    z-index: 200;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 var(--radio) 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 0.1875rem solid var(--color-acento);
+    outline-offset: 0.125rem;
+}
+
+/* ========================================
+   ACCESIBILIDAD: focus visible
+   ======================================== */
+:focus-visible {
+    outline: 0.1875rem solid var(--color-secundario);
+    outline-offset: 0.125rem;
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLET (<= 768px)
+   ======================================== */
+@media (max-width: 48rem) {
+    .site-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+
+    .hero {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.65rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .galeria-articulos,
+    .categoria-seccion .articulos-grid {
+        gap: 1rem;
+    }
+
+    .categoria-seccion .articulos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dropdown-select {
+        min-width: 100%;
+    }
+
+    .formulario-contacto {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - MOBILE (< 480px)
+   ======================================== */
+@media (max-width: 30rem) {
+    .site-header h1 {
+        font-size: 1.15rem;
+    }
+
+    .hero h2 {
+        font-size: 1.35rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .categorias-resumen {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-seccion .articulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .articulo-card .card-img {
+        height: 12rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .acerca-section {
+        padding: 1.25rem;
+    }
+
+    .formulario-contacto {
+        padding: 1.25rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - DESKTOP (> 768px)
+   ======================================== */
+@media (min-width: 48.01rem) {
+    .categoria-seccion .articulos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    .main-nav,
+    .skip-link,
+    .btn,
+    .btn-info,
+    .btn-contact,
+    .btn-primary,
+    .btn-secondary {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .site-header,
+    .site-footer {
+        background: white;
+        color: black;
+    }
+}
