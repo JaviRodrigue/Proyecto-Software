@@ -49,24 +49,18 @@
             <summary>Seleccionar categoría <span class="flecha" aria-hidden="true">&#9662;</span></summary>
             <div class="opciones" role="group" aria-labelledby="etiqueta-categorias">
               <p class="sr-only" id="etiqueta-categorias">Categorías de artículos disponibles</p>
-              <label class="opcion">
-                <input type="radio" name="categoria" value="todas" checked>
-                <span>Todas las categorías</span>
-              </label>
-              <label class="opcion">
-                <input type="radio" name="categoria" value="tejidos">
-                <span>Solo tejidos</span>
-              </label>
-              <label class="opcion">
-                <input type="radio" name="categoria" value="ceramicas">
-                <span>Solo cerámicas</span>
-              </label>
-              <label class="opcion">
-                <input type="radio" name="categoria" value="pinturas">
-                <span>Solo pinturas</span>
-              </label>
+              <label class="opcion" for="cat-todas"><span>Todas las categorías</span></label>
+              <label class="opcion" for="cat-tejidos"><span>Solo tejidos</span></label>
+              <label class="opcion" for="cat-ceramicas"><span>Solo cerámicas</span></label>
+              <label class="opcion" for="cat-pinturas"><span>Solo pinturas</span></label>
             </div>
           </details>
+
+          <input type="radio" id="cat-todas" name="categoria" value="todas" checked class="sr-only" aria-label="Todas las categorías">
+          <input type="radio" id="cat-tejidos" name="categoria" value="tejidos" class="sr-only" aria-label="Solo tejidos">
+          <input type="radio" id="cat-ceramicas" name="categoria" value="ceramicas" class="sr-only" aria-label="Solo cerámicas">
+          <input type="radio" id="cat-pinturas" name="categoria" value="pinturas" class="sr-only" aria-label="Solo pinturas">
+
           <p class="estado-filtro">Mostrando todos los artículos.</p>
         </div>
 
